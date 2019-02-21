@@ -22,10 +22,10 @@ scenario.runTape("use the commit_entry function to add a person entry", (t, { al
   let result
   try {
     result = alice.call("people", "add_person", { name: "Bonnitta" })
-  } catch (e) {}
+  } catch (e) { }
   t.deepEqual(result, { Ok: bonnittaAddress })
 })
-
+/*
 scenario.runTape("use the update_entry function to update an existing person entry", (t, { alice }) => {
   let result
   try {
@@ -106,3 +106,5 @@ scenario.runTape("use the get_links function to return people linked from Bonnit
   } catch (e) {}
   t.deepEqual(result, { Ok: { addresses: [ "QmPcNictUVyk9tki1TwnsZ2RzzuPYdNPoFXZReRQLUJb4X" ] } })
 })
+
+*/

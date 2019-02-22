@@ -42,6 +42,7 @@ fn handle_add_person(name: String) -> ZomeApiResult<Address> {
 
    let address = hdk::commit_entry(&person_entry)?;
 
+   // Ok(address.to_string().into())
    Ok(address)
 }
 
@@ -73,7 +74,7 @@ define_zome! {
 
     functions: [
             add_person: {
-            inputs: |person: String|,
+            inputs: |name: String|,
             outputs: |response: ZomeApiResult<Address>|,
             handler: handle_add_person
         }
